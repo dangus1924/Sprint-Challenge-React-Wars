@@ -1,18 +1,26 @@
 import React from 'react';
-import { Card, Feed } from 'semantic-ui-react'
-
+import { Card, CardImg, CardText, CardBody,CardTitle, CardSubtitle, } from 'reactstrap';
 const Character = (props) => (
-    <Card>
-        <Card.Header>{props.name}</Card.Header>
-        <Feed>
-            <Feed.Content>Birth Year: {props.birth_year}</Feed.Content>
-            <Feed.Content>eye color: {props.eye_color}</Feed.Content>
-            <Feed.Content>gender: {props.gender}</Feed.Content>
-            <Feed.Content>hair color: {props.hair_color}</Feed.Content>
-            <Feed.Content>height: {props.height}</Feed.Content>
-            <Feed.Content>skin color: {props.skin_color}</Feed.Content>
-        </Feed>
-    </Card>
-)
+    <div>
+      <Card>
+        <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
+        <CardBody>
+          <CardTitle>{props.name}</CardTitle>
+          <CardSubtitle>Light</CardSubtitle>
+          <CardText>
+            Birth Year: {props.birth_year},
+            eye color: {props.eye_color},
+            gender: {props.gender},
+            hair color: {props.hair_color},
+            height: {props.height},
+            skin color: {props.skin_color}
+          </CardText>          
+        </CardBody>
+      </Card>
+    </div>
+  );
 
+
+
+    
 export default Character
