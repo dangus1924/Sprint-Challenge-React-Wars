@@ -6,7 +6,7 @@ import Cards from './Cards'
 import './App.css';
 
 const App = () => {
-  const [characterItem, setCharacterItem] = useState(' ');
+  const [data, setData] = useState(' ');
   
   useEffect(() => {
     axios.get('https://swapi.co/api/people/5/')
@@ -14,7 +14,7 @@ const App = () => {
       console.log('request completed')
       console.log('data', success.data)
       console.log('results', success.data.results)
-      setCharacterItem(success.data.results)
+      setData(success.data.results)
     })
     .catch(failure => {
       console.log('unable to complete the request')
@@ -24,7 +24,7 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
-      <Cards characterItem={characterItem}/>
+      <Cards data={data}/>
     </div>
   );
 }

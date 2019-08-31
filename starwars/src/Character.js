@@ -1,9 +1,17 @@
 import React from 'react';
+import styled from 'styled-components';
 import { Card, CardImg, CardText, CardBody,CardTitle, CardSubtitle, } from 'reactstrap';
-const Character = (props) => (
+
+const Pic = styled.img`
+width 200px;
+margin: auto;
+`
+
+function Character(props){
+    return(
     <div>
       <Card>
-        <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
+        <Pic top width="50%" src="https://www.digitalwallpaper4free.com/wp-content/uploads/movies/281115/Star%20Wars%20Episode%204%20Leia%20Organa%20And%20Storm%20Troopers%20002.jpg" />
         <CardBody>
           <CardTitle>{props.name}</CardTitle>
           <CardSubtitle>Light</CardSubtitle>
@@ -18,7 +26,8 @@ const Character = (props) => (
         </CardBody>
       </Card>
     </div>
-  );
+    )
+};
 
 
 
